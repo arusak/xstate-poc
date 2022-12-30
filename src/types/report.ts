@@ -12,4 +12,4 @@ export const emptyReport: Report = {
   workStarted: null,
   workEnded: null,
   isAborted: false,
-};
+} as const;

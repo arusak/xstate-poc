@@ -8,7 +8,7 @@ const format = (options: Intl.DateTimeFormatOptions) => (dateOrString: Date | st
     return '';
   }
   const date = typeof dateOrString === 'string' ? new Date(dateOrString) : dateOrString;
-  if (isNaN(date.valueOf())) {
+  if (Number.isNaN(date.valueOf())) {
     return '';
   }
   const dateTimeFormat = Intl.DateTimeFormat(locale, options);
@@ -37,6 +37,6 @@ export const DF = Object.freeze({
   format,
   formatWeekDay: format({ weekday: 'long' }),
   formatDate: format({ month: 'long', day: 'numeric' }),
-  formatTime: format({ hour: '2-digit', minute: '2-digit', hour12: false }),
+  formatTime: format({ hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false }),
   formatDuration,
 });

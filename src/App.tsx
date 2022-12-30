@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import { Flow } from 'types/flow';
 import { ChooseFlow } from 'components/ChooseFlow';
-import { MainScene } from 'flows/MainScene';
+import { MainScene } from 'scenes/MainScene';
 import { simpleMachine } from 'machines/SimpleMachine';
 import { photosMachine } from 'machines/PhotosMachine';
 import { ThemeProvider, createTheme } from '@mui/material/styles';

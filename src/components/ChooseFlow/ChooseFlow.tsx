@@ -16,14 +16,12 @@ const Wrapper = styled.div`
   justify-content: center;
 `;
 
-const ChooseFlow: FC<Props> = ({ onSelect }) => {
-  return (
-    <Wrapper>
-      <h1>Please select your workflow</h1>
-      <Button onClick={() => onSelect('photos')}>Workflow with photo upload</Button>
-      <Button onClick={() => onSelect('simple')}>Simple workflow</Button>
-    </Wrapper>
-  );
-};
+const ChooseFlow: FC<Props> = ({ onSelect }) => (
+  <Wrapper>
+    <h1>Please select your workflow</h1>
+    <Button onClick={() => onSelect('photos')}>Workflow with photo upload</Button>
+    <Button onClick={() => onSelect('simple')}>Simple workflow</Button>
+  </Wrapper>
+);
 
 export default memo(ChooseFlow);

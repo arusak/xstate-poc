@@ -15,13 +15,11 @@ const Wrapper = styled.div`
   background: rgba(255, 255, 255, 0.1);
 `;
 
-const TimeStep: FC<PropsWithChildren<Props>> = ({ value, children }) => {
-  return (
-    <Wrapper>
-      <div>{DF.formatTime(value)}</div>
-      <div>{children}</div>
-    </Wrapper>
-  );
-};
+const TimeStep: FC<PropsWithChildren<Props>> = ({ value, children }) => (
+  <Wrapper>
+    <div>{DF.formatTime(value)}</div>
+    <div>{children}</div>
+  </Wrapper>
+);
 
 export default memo(TimeStep);
